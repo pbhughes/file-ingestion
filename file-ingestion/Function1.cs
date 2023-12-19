@@ -20,7 +20,7 @@ namespace file_ingestion
 
             using (var blobStreamReader = new StreamReader(myBlob))
             {
-                int recordSize = 100;
+                int recordSize = 1000;
                 string line = string.Empty;
                 List<string> lines = new List<string>(recordSize);
                 while( (line = blobStreamReader.ReadLine()) != null){
