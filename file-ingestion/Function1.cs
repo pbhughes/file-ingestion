@@ -14,7 +14,7 @@ namespace file_ingestion
     public class Function1
     {
         [FunctionName("Function1")]
-        public void Run([BlobTrigger("landing/{name}", Connection = "AZURE-STORAGE")]Stream myBlob, string name, ILogger log)
+        public void Run([BlobTrigger("landing/{name}", Connection = "AZURESTORAGE")]Stream myBlob, string name, ILogger log)
         {
             log.LogInformation($"C# Blob trigger function Processed blob\n Name:{name} \n Size: {myBlob.Length} Bytes");
 
