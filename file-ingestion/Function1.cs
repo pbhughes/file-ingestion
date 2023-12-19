@@ -20,9 +20,9 @@ namespace file_ingestion
 
             using (var blobStreamReader = new StreamReader(myBlob))
             {
-                int recordSize = 10;
+                int recordSize = 100;
                 string line = string.Empty;
-                List<string> lines = new List<string>(10);
+                List<string> lines = new List<string>(recordSize);
                 while( (line = blobStreamReader.ReadLine()) != null){
                     line = $"{ line } ingested {DateTime.Now.TimeOfDay.ToString()}";
                     lines.Add(line);
