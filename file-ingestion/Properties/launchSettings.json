@@ -1,0 +1,9 @@
+{
+  "profiles": {
+    "file_ingestion": {
+      "commandName": "Project",
+      "commandLineArgs": "--port 7116",
+      "launchBrowser": false
+    }
+  }
+}
