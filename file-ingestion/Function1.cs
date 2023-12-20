@@ -16,7 +16,7 @@ namespace file_ingestion
         [FunctionName("File-Ingestion")]
         public void Run([BlobTrigger("landing/{name}", Connection = "AZURESTORAGE")]Stream myBlob, string name, ILogger log)
         {
-            log.LogInformation($"C# Blob trigger function Processed blob\n Name:{name} \n Size: {myBlob.Length} Bytes");
+            log.LogInformation($"C# Blob trigger function Processed blob\n Name:{name} \n Size: {myBlob.Length} Bytes add some code");
 
             using (var blobStreamReader = new StreamReader(myBlob))
             {
